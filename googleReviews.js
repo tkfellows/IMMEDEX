@@ -8,7 +8,7 @@
             , render: ['reviews']
             , min_rating: 0
             , max_rows: 0
-            , rotateTime: false
+            , rotateTime: 3000
         };
 
         var plugin = this;
