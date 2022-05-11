@@ -6,8 +6,8 @@
         var defaults = {
               placeId: 'ChIJiavkezvT1IkRYWdvVD17DNE' // placeId provided by google api documentation
             , render: ['reviews']
-            , min_rating: 0
-            , max_rows: 0
+            , min_rating: 4
+            , max_rows: 2
             , rotateTime: 3000
         };
 
