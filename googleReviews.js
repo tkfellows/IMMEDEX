@@ -1,4 +1,4 @@
-/* https://github.com/stellarEVH/IMMEDEX/googleReviews */
+/* https://github.com/peledies/google-places */
 (function($) {
 
     $.googlePlaces = function(element, options) {
