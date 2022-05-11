@@ -9,6 +9,7 @@
             , min_rating: 4
             , max_rows: 2
             , rotateTime: 3000
+            , shorten_names: true
         };
 
         var plugin = this;
