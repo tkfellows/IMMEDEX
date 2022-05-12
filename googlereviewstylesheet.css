@@ -22,7 +22,7 @@ flex: 1 1 20%;
   .review-item { flex: 1 1 90%; }
 }
 
-.review-meta, .review-stars {text-align:center; font-size:50%;}
+.review-meta, .review-stars {text-align:center; font-size:150%;}
 .review-author { text-transform: capitalize; font-weight:bold; }
 .review-date {opacity:.8; display:block;}
 .review-text {  line-height:1; text-align:left; max-width:32em;}
