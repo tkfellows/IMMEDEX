@@ -24,8 +24,8 @@ flex: 1 1 20%;
 
 .review-meta, .review-stars {text-align:center; font-size:50%;}
 .review-author { text-transform: capitalize; font-weight:bold; }
-.review-date {opacity:.8; display:block;}
-.review-text {  line-height:1; text-align:left; max-width:32em;}
+.review-date {opacity:.4; display:block;}
+.review-text {  line-height:1; text-align:left; max-width:32em; max-height: 32em}
 
  
 
