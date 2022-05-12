@@ -36,7 +36,7 @@ margin:0; padding:0;
 }
 
 .review-stars ul li {
-float: left;
+float: right;
 list-style: none !important;
 margin-right: 1px;
 line-height:1;
