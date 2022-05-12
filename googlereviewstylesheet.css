@@ -44,7 +44,7 @@ line-height:1;
 
 .review-stars ul li i {
   color: #E4B248;
-  font-size: 1em;
+  font-size: 0.5em;
   font-style:normal;
 }
 .review-stars ul li i.inactive { color: #c6c6c6;}
