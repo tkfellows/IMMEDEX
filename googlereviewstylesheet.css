@@ -25,7 +25,7 @@ flex: 1 1 20%;
 .review-meta, .review-stars {text-align:center; font-size:50%;}
 .review-author { text-transform: capitalize; font-weight:bold; }
 .review-date {opacity:.4; display:block;}
-.review-text {  line-height:1; text-align:left; max-width:32em; max-height: 10px;}
+.review-text {  line-height:1; text-align:left; max-width:32em;}
 
  
 
@@ -44,7 +44,7 @@ line-height:1;
 
 .review-stars ul li i {
   color: #E4B248;
-  font-size: 1.4em;
+  font-size: 1em;
   font-style:normal;
 }
 .review-stars ul li i.inactive { color: #c6c6c6;}
