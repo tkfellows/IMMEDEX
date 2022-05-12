@@ -2,7 +2,7 @@
 
 #google-reviews {
 display:flex;
-flex-wrap:wrap-reverse;
+flex-wrap:wrap;
 /*display: grid;
 grid-template-columns: repeat( auto-fit, minmax(320px, 1fr));*/
 }
@@ -44,7 +44,7 @@ line-height:1;
 
 .review-stars ul li i {
   color: #E4B248;
-  font-size: 1.4em;
+  font-size: 1em;
   font-style:normal;
 }
 .review-stars ul li i.inactive { color: #c6c6c6;}
