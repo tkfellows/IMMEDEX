@@ -2,7 +2,7 @@
 
 #google-reviews {
 display:flex;
-flex-wrap:wrap;
+flex-wrap:wrap-reverse;
 /*display: grid;
 grid-template-columns: repeat( auto-fit, minmax(320px, 1fr));*/
 }
