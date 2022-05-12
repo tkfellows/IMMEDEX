@@ -15,7 +15,7 @@ flex: 1 1 20%;
 }
 
 @media ( max-width:1200px) {
-  .review-item { flex: 1 1 80%; }
+  .review-item { flex: 1 1 40%; }
 }
 
 @media ( max-width:450px) {
@@ -25,7 +25,7 @@ flex: 1 1 20%;
 .review-meta, .review-stars {text-align:center; font-size:115%;}
 .review-author { text-transform: capitalize; font-weight:bold; }
 .review-date {opacity:.8; display:block;}
-.review-text {  line-height:1; text-align:left; max-width:32em; max-height: 10em;}
+.review-text {  line-height:1; text-align:left; max-width:32em; margin:auto;}
 
  
 
