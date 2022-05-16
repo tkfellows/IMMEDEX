@@ -1,0 +1,75 @@
+<!-- Tyee, you need to have the major elements rendered before looping through JSON data. Therefore, try getElementByID and Class. and appending child to each class based on the the json data. That way the scripts loaded already have a framework to cycle through each image and you can add/remove as you wish...I think that's how it works at least -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Testimonial HTML</title>
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="http://localhost:8000/immedex_favicon.ico">
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="http://localhost:8000/masterReview.css" type="text/css" >
+        <!-- Custom JS file -->
+        <script src="http://localhost:8000/masterReview.js"></script>
+        <!-- Poppins Font Family Style -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet"> 
+        <!-- using-Font-Awesome --> 
+        <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            var element = document.getElementById("myCarousel");
+            var myCarousel = new bootstrap.Carousel(element);
+        });
+        </script>
+    </head>
+    <body>
+        <section>
+            <!-- Heading -->
+            <div class="review-heading">
+                <div class="google-logo">
+                    <!-- <span>Google Reviews</span> -->
+                    <img src="http://localhost:8000/google-reviews-logo.png" width="150">
+                </div>
+                <div class="google-button">
+                    <button type="button">
+                        <span class="google-button-fill">
+                            <span class="google-button-text">
+                                Write a Review
+                            </span>
+                        </span>
+                    </button>
+                </div>
+                <!-- <h1>What our patients say</h1> -->
+            </div>
+        </section>
+        <section>
+            <div class="heading-content-spacer"></div>
+        </section>
+        <section id="review-main">
+            <div class="review-box-container">
+                <div class="container-lg my-3">
+                    <div id="myCarousel" class="carousel slide">
+                        <!-- Carousel indicators -->
+                        <ol class="carousel-indicators"></ol>
+                    
+                        <!-- Wrapper for carousel items -->
+                        <div class="carousel-inner"></div>
+                    
+                        <!-- Carousel controls -->
+                        <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
