@@ -85,6 +85,7 @@ function appendCarouselReview(jsonData,classContainerTag) {
 document.addEventListener('DOMContentLoaded', function() {
 fetch('https://cdn.jsdelivr.net/gh/stellarEVH/IMMEDEX/immedexReviews.json', {
     method: 'GET',
+    mode: 'cors',
     headers : { 
         'Content-Type': 'application/json',
         'Accept': 'application/json',
@@ -109,6 +110,7 @@ fetch('https://cdn.jsdelivr.net/gh/stellarEVH/IMMEDEX/immedexReviews.json', {
 document.addEventListener('DOMContentLoaded', function() {
 fetch('https://cdn.jsdelivr.net/gh/stellarEVH/IMMEDEX/immedexReviews.json', {
     method: 'GET',
+    mode: 'cors',
     headers : { 
         'Content-Type': 'application/json',
         'Accept': 'application/json',
