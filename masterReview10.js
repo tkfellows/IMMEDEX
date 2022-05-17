@@ -121,7 +121,7 @@ fetch('https://cdn.jsdelivr.net/gh/stellarEVH/IMMEDEX/immedexReviews.json', {
 .then(res => {
     if (res.ok) {
         console.log(res);
-        console.log('Collected review data from Github);
+        console.log('Collected review data from Github');
         return res.json();
     } else {
         console.log("Unable to collect review data from Github")
