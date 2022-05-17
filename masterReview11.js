@@ -105,7 +105,11 @@ fetch('https://cdn.jsdelivr.net/gh/stellarEVH/IMMEDEX/immedexReviews.json', {
     console.log(data.reviews);
     appendCarouselIndicator(data.reviews,"carousel-indicators");
 })
-.catch(error => console.log('Error in collecting indicator data from github'))
+.catch( err => {
+    err.text().then( errorMessage => {
+      this.props.dispatch(displayTheError(errorMessage))
+    })
+  })
 }, false);
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -131,5 +135,9 @@ fetch('https://cdn.jsdelivr.net/gh/stellarEVH/IMMEDEX/immedexReviews.json', {
     console.log(data.reviews)
     appendCarouselReview(data.reviews,"carousel-inner");
 })
-.catch(error => console.log('Error in collecting review data from github'))
+.catch( err => {
+    err.text().then( errorMessage => {
+      this.props.dispatch(displayTheError(errorMessage))
+    })
+  })
 }, false);
