@@ -81,71 +81,79 @@ function appendCarouselReview(jsonData,classContainerTag) {
         reviewContainer.appendChild(div);
     }
 }
+function handleErrors(response) {
+    if (!response.ok) {
+        throw Error(response.statusText);
+    }
+    return response;
+}
 
 document.addEventListener('DOMContentLoaded', function() {
-fetch('https://cdn.jsdelivr.net/gh/stellarEVH/IMMEDEX/immedexReviews.json', {
-    method: 'GET',
-    mode: 'no-cors',
-    headers : { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        'Cache-Control': 'no-cache, must-revalidate'
-        }
-})
-.then(res => {
-    if (res.ok) {
-        console.log(res);
-        console.log('Collected indicator data from Github');
-        return res.json();
-    } else {
-        console.log("Unable to collect indicator data from Github")
-    }
-})// Need to convert res object to json
-.then(data => { 
-    console.log(data.reviews);
-    appendCarouselIndicator(data.reviews,"carousel-indicators");
-})
-.catch( err => {
-  if (err.text) {
-    err.text().then( errorMessage => {
-      this.props.dispatch(displayTheError(errorMessage))
+    fetch('https://cdn.jsdelivr.net/gh/stellarEVH/IMMEDEX/immedexReviews.json', {
+        method: 'GET',
+        mode: 'no-cors',
+        headers : { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'Cache-Control': 'no-cache, must-revalidate'
+            }
     })
-  } else {
-    this.props.dispatch(displayTheError('Error.')) // Hardcoded error here
-  }
-})
-}, false);
+        .then(handleErrors)
+        .then(res => {
+            if (res.ok) {
+                console.log(res);
+                console.log('Collected indicator data from Github');
+                return res.json();
+            } else {
+                console.log("Unable to collect indicator data from Github")
+            }
+        })// Need to convert res object to json
+        .then(data => { 
+            console.log(data.reviews);
+            appendCarouselIndicator(data.reviews,"carousel-indicators");
+        })
+        .catch( err => {
+          if (err.text) {
+            err.text().then( errorMessage => {
+              this.props.dispatch(displayTheError(errorMessage))
+            })
+          } else {
+            this.props.dispatch(displayTheError('Error.')) // Hardcoded error here
+          }
+        })
+    }, false);
 
 document.addEventListener('DOMContentLoaded', function() {
-fetch('https://cdn.jsdelivr.net/gh/stellarEVH/IMMEDEX/immedexReviews.json', {
-    method: 'GET',
-    mode: 'no-cors',
-    headers : { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        'Cache-Control': 'no-cache, must-revalidate'
-        }
-})
-.then(res => {
-    if (res.ok) {
-        console.log(res);
-        console.log('Collected review data from Github');
-        return res.json();
-    } else {
-        console.log("Unable to collect review data from Github")
-    }
-})// Need to convert res object to json
-.then(data => { 
-    console.log(data.reviews)
-    appendCarouselReview(data.reviews,"carousel-inner");
-})
-.catch( err => {
-  if (err.text) {
-    err.text().then( errorMessage => {
-      this.props.dispatch(displayTheError(errorMessage))
-    })
-  } else {
-    this.props.dispatch(displayTheError('Error.')) // Hardcoded error here
-  }
-})
-}, false);
+    fetch('https://cdn.jsdelivr.net/gh/stellarEVH/IMMEDEX/immedexReviews.json', {
+        method: 'GET',
+        mode: 'no-cors',
+        headers : { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'Cache-Control': 'no-cache, must-revalidate'
+            }
+        })
+        .then(handleErrors)
+        .then(res => {
+            if (res.ok) {
+                console.log(res);
+                console.log('Collected review data from Github');
+                return res.json();
+            } else {
+                console.log("Unable to collect review data from Github")
+            }
+        })// Need to convert res object to json
+        .then(data => { 
+            console.log(data.reviews)
+            appendCarouselReview(data.reviews,"carousel-inner");
+        })
+        .catch( err => {
+          if (err.text) {
+            err.text().then( errorMessage => {
+              this.props.dispatch(displayTheError(errorMessage))
+            })
+          } else {
+            this.props.dispatch(displayTheError('Error.')) // Hardcoded error here
+          }
+        })
+    }, false);
