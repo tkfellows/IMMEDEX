@@ -106,10 +106,14 @@ fetch('https://cdn.jsdelivr.net/gh/stellarEVH/IMMEDEX/immedexReviews.json', {
     appendCarouselIndicator(data.reviews,"carousel-indicators");
 })
 .catch( err => {
+  if (err.text) {
     err.text().then( errorMessage => {
       this.props.dispatch(displayTheError(errorMessage))
     })
-  })
+  } else {
+    this.props.dispatch(displayTheError('Error.')) // Hardcoded error here
+  }
+})
 }, false);
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -136,8 +140,12 @@ fetch('https://cdn.jsdelivr.net/gh/stellarEVH/IMMEDEX/immedexReviews.json', {
     appendCarouselReview(data.reviews,"carousel-inner");
 })
 .catch( err => {
+  if (err.text) {
     err.text().then( errorMessage => {
       this.props.dispatch(displayTheError(errorMessage))
     })
-  })
+  } else {
+    this.props.dispatch(displayTheError('Error.')) // Hardcoded error here
+  }
+})
 }, false);
