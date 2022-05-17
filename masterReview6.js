@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
 fetch('https://cdn.jsdelivr.net/gh/stellarEVH/IMMEDEX/immedexReviews.json', {
     method: 'GET',
     headers : { 
-        // 'Content-Type': 'application/json',
+        'Content-Type': 'application/json',
         'Accept': 'application/json',
         'Cache-Control': 'no-cache, must-revalidate'
         }
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
 fetch('https://cdn.jsdelivr.net/gh/stellarEVH/IMMEDEX/immedexReviews.json', {
     method: 'GET',
     headers : { 
-        // 'Content-Type': 'application/json',
+        'Content-Type': 'application/json',
         'Accept': 'application/json',
         'Cache-Control': 'no-cache, must-revalidate'
         }
