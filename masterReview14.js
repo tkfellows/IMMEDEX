@@ -112,14 +112,9 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log(data.reviews);
             appendCarouselIndicator(data.reviews,"carousel-indicators");
         })
-        .catch( err => {
-          if (err.text) {
-            err.text().then( errorMessage => {
-              this.props.dispatch(displayTheError(errorMessage))
-            })
-          } else {
-            this.props.dispatch(displayTheError('Error.')) // Hardcoded error here
-          }
+        .catch(error => {
+            console.log(error);
+            console.log("Error in collecting review data from Github");
         })
     }, false);
 
@@ -147,13 +142,8 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log(data.reviews)
             appendCarouselReview(data.reviews,"carousel-inner");
         })
-        .catch( err => {
-          if (err.text) {
-            err.text().then( errorMessage => {
-              this.props.dispatch(displayTheError(errorMessage))
-            })
-          } else {
-            this.props.dispatch(displayTheError('Error.')) // Hardcoded error here
-          }
+        .catch(error => {
+            console.log(error);
+            console.log("Error in collecting review data from Github");
         })
     }, false);
