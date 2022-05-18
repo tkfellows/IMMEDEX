@@ -35,6 +35,15 @@
     font-weight: bold;
     font-size: 0.9rem !important;
 }
+.google-button:hover{
+    transform: translateY(-1px);
+    transition: all ease 0.3s;
+}
+.google-button:active {
+    background-color: #d3fad5;
+    box-shadow: 1px 1px #d3fad5;
+    transform: translateY(2px);
+ }
 .heading-content-spacer {
     height: 10px;
 }
