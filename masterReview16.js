@@ -80,54 +80,52 @@ function appendCarouselReview(jsonData,classContainerTag) {
         `;
         reviewContainer.appendChild(div);
     }
-}
+};
 function handleErrors(response) {
     if (!response.ok) {
         throw Error(response.statusText);
     }
     return response;
-}
+};
 
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('https://cdn.jsdelivr.net/gh/stellarEVH/IMMEDEX/immedexReviews.json')
-        .then(handleErrors)
-        .then(res => {
-            if (res.ok) {
-                console.log(res);
-                console.log('Collected indicator data from Github');
-                return res.json();
-            } else {
-                console.log("Unable to collect indicator data from Github")
-            }
-        })// Need to convert res object to json
-        .then(data => { 
-            console.log(data.reviews);
-            appendCarouselIndicator(data.reviews,"carousel-indicators");
-        })
-        .catch(error => {
-            console.log(error);
-            console.log("Error in collecting review data from Github");
-        })
-    }, false);
+fetch('https://cdn.jsdelivr.net/gh/stellarEVH/IMMEDEX/immedexReviews.json')
+    .then(handleErrors)
+    .then(res => {
+        if (res.ok) {
+            console.log(res);
+            console.log('Collected indicator data from Github');
+            return res.json();
+        } else {
+            console.log("Unable to collect indicator data from Github")
+        }
+    })// Need to convert res object to json
+    .then(data => { 
+        console.log(data.reviews);
+        appendCarouselIndicator(data.reviews,"carousel-indicators");
+    })
+    .catch(error => {
+        console.log(error);
+        console.log("Error in collecting review data from Github");
+    })
+};
 
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('https://cdn.jsdelivr.net/gh/stellarEVH/IMMEDEX/immedexReviews.json')
-        .then(handleErrors)
-        .then(res => {
-            if (res.ok) {
-                console.log(res);
-                console.log('Collected review data from Github');
-                return res.json();
-            } else {
-                console.log("Unable to collect review data from Github")
-            }
-        })// Need to convert res object to json
-        .then(data => { 
-            console.log(data.reviews)
-            appendCarouselReview(data.reviews,"carousel-inner");
-        })
-        .catch(error => {
-            console.log(error);
-            console.log("Error in collecting review data from Github");
-        })
-    }, false);
+fetch('https://cdn.jsdelivr.net/gh/stellarEVH/IMMEDEX/immedexReviews.json')
+    .then(handleErrors)
+    .then(res => {
+        if (res.ok) {
+            console.log(res);
+            console.log('Collected review data from Github');
+            return res.json();
+        } else {
+            console.log("Unable to collect review data from Github")
+        }
+    })// Need to convert res object to json
+    .then(data => { 
+        console.log(data.reviews)
+        appendCarouselReview(data.reviews,"carousel-inner");
+    })
+    .catch(error => {
+        console.log(error);
+        console.log("Error in collecting review data from Github");
+    })
+};
