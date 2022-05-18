@@ -197,3 +197,7 @@
     color: #ffffff;
     background-color: #e33425;
 }
+
+.page-section > .content-wrapper {
+  max-width: 100%;
+}
