@@ -87,7 +87,7 @@ function handleErrors(response) {
     }
     return response;
 };
-
+ document.addEventListener('DOMContentLoaded', function() {
 fetch('https://cdn.jsdelivr.net/gh/stellarEVH/IMMEDEX/immedexReviews.json')
     .then(handleErrors)
     .then(res => {
@@ -107,7 +107,7 @@ fetch('https://cdn.jsdelivr.net/gh/stellarEVH/IMMEDEX/immedexReviews.json')
         console.log(error);
         console.log("Error in collecting review data from Github");
     })
-};
+}, false);
 
 fetch('https://cdn.jsdelivr.net/gh/stellarEVH/IMMEDEX/immedexReviews.json')
     .then(handleErrors)
@@ -128,4 +128,4 @@ fetch('https://cdn.jsdelivr.net/gh/stellarEVH/IMMEDEX/immedexReviews.json')
         console.log(error);
         console.log("Error in collecting review data from Github");
     })
-};
+}, false);
