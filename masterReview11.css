@@ -97,12 +97,12 @@
     flex-direction: column;
 }
 .review-user strong{
-    color: #3d3d3d;
+    color: black;
     font-family: sans-serif;
     font-size: 1.1rem;
 }
 .review-user span{
-    color: #979797;
+    color: darkslategray;
     font-family: sans-serif;
     font-size: 0.8rem;
     text-transform: capitalize;
