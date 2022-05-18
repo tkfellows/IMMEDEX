@@ -159,13 +159,18 @@
     .review-heading {
         padding: 15px 20px !important;
     }
+    .google-logo {
+        scale: 80%;
+    }
     .google-button {
+        padding: 4%;
+    }
+    .google-button button{
         border: 1px !important;
-        padding: 10px;
+        padding: 4px 6px;
     }
     .google-button-text {
-        font-family: sans-serif;
-        font-size: 0.75rem !important;
+        font-size: 0.65rem !important;
     }
     /* Review Box */
     .review-profile-img {
@@ -174,16 +179,13 @@
         height: 45px !important;
     }
     .review-user strong{
-        font-family: sans-serif;
         font-size: 0.7rem !important;
     }
     .review-user span{
-        font-family: sans-serif;
         font-size: 0.5rem !important;
         text-transform: capitalize;
     }
     .client-comment p{
-        font-family: sans-serif;
         font-size: 0.8rem !important;
     }
     .review-stars {
