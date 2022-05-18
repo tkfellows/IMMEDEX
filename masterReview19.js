@@ -93,7 +93,6 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(handleErrors)
         .then(res => {
             if (res.ok) {
-                console.log(res);
                 console.log('Collected indicator data from Github');
                 return res.json();
             } else {
@@ -101,7 +100,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         })// Need to convert res object to json
         .then(data => { 
-            console.log(data.reviews);
             appendCarouselIndicator(data.reviews,"carousel-indicators");
         })
         .catch(error => {
@@ -115,7 +113,6 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(handleErrors)
         .then(res => {
             if (res.ok) {
-                console.log(res);
                 console.log('Collected review data from Github');
                 return res.json();
             } else {
@@ -123,7 +120,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         })// Need to convert res object to json
         .then(data => { 
-            console.log(data.reviews)
             appendCarouselReview(data.reviews,"carousel-inner");
         })
         .catch(error => {
