@@ -189,8 +189,8 @@
         font-size: 0.8rem !important;
     }
     .review-stars {
-        scale: 75%;
-        margin-right: 10px;
+        scale: 55%;
+        width: 55%;
     }
 }
 ::selection{
