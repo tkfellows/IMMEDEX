@@ -47,10 +47,10 @@
     width: 100%;
 }
 #review-main .my-3 {
-    margin-top: 10px !important;
-    margin-bottom: 10px !important;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-top: 5% !important;
+    margin-bottom: 5% !important;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 #review-main .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 100% !important;
@@ -200,4 +200,8 @@
 
 .page-section > .content-wrapper {
   max-width: 100%;
+}
+[class*="sqs-col"] .sqs-block {
+  padding-left: 0px;
+  padding-right: 0px;
 }
