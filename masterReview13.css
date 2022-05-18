@@ -214,3 +214,13 @@
   padding-left: 0px;
   padding-right: 0px;
 }
+.google-review-pen-icon {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAQAAABag45kAAAAdklEQVR4AWPAAFoMFxjuMdQwYAV8TJeAkvewK9BKEm9dD5W+hyHJdIlp22nXzq0gSe5bGJIgYYgC7lt7FmCRhCl4Pv2/HJokDHLe0DD6z4VDEmQsVCdhSQaskgiAX5IBvyQDiqQvQxUa/D8HDCeBdP43+x+KCgHCHnCSjPtsAwAAAABJRU5ErkJggg==);
+    display: inline-block;
+    height: 14px;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 15px;
+    -webkit-filter:  invert(1);
+    filter:  invert(1);
+  }
